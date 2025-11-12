@@ -17,7 +17,7 @@ Minimal reference for multi-label vehicle recognition (make, model, year) using 
 └── evaluate.py          # Metric reporting on labeled CSVs
 ```
 
-## Example usage
+## General instructions
 
 ```bash
 pip install -r requirements.txt
