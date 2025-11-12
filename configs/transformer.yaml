@@ -1,0 +1,25 @@
+seed: 42
+data:
+  metadata_csv: data/metadata.csv
+  image_root: data/images
+  label_columns:
+    make: make
+    model: model
+    year: year
+  val_split: 0.2
+  stratify_column: make
+training:
+  epochs: 10
+  batch_size: 16
+  num_workers: 4
+  learning_rate: 5e-5
+  weight_decay: 0.01
+  grad_clip: 1.0
+  mixed_precision: true
+model:
+  checkpoint: google/vit-base-patch16-224-in21k
+  dropout: 0.1
+  freeze_backbone: false
+logging:
+  output_dir: outputs/transformer
+  save_every: 2
